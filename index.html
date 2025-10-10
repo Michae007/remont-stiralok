@@ -528,208 +528,145 @@
         }
 
         /* Отзывы с Авито */
-        .avito-reviews-section {
-            background: #f8f9fa;
-            padding: 80px 0;
-        }
+<!-- Отзывы с Авито -->
+<section class="avito-reviews-section">
+    <div class="avito-reviews-container">
+        <div class="avito-reviews-header">
+            <h2>Отзывы клиентов с Авито</h2>
+            <p>Реальные отзывы от наших клиентов. Обновляются автоматически!</p>
+            <div class="avito-badge">
+                <i class="bi bi-shop"></i> Официальный профиль на Авито
+            </div>
+        </div>
         
-        .avito-reviews-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        <div id="avito-reviews-grid" class="avito-reviews-grid">
+            <div class="loading-reviews">
+                <i class="bi bi-arrow-repeat"></i> Загружаем актуальные отзывы...
+            </div>
+        </div>
         
-        .avito-reviews-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .avito-reviews-header h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .avito-reviews-header p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .avito-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #FF6B35;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
-        
-        .avito-reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .avito-review-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #eaeaea;
-        }
-        
-        .avito-review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-        
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .reviewer-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #FF6B35, #FF8C42);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .reviewer-details h4 {
-            margin: 0;
-            font-size: 1rem;
-            color: #333;
-        }
-        
-        .review-date {
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 3px;
-        }
-        
-        .review-rating {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background: #f8f9fa;
-            padding: 5px 10px;
-            border-radius: 20px;
-        }
-        
-        .rating-stars {
-            color: #FFB800;
-            font-size: 0.9rem;
-        }
-        
-        .rating-value {
-            font-weight: 600;
-            color: #333;
-            font-size: 0.9rem;
-        }
-        
-        .review-text {
-            color: #444;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-        
-        .review-service {
-            display: inline-block;
-            background: #f0f7ff;
-            color: #0066cc;
-            padding: 5px 10px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        
-        .review-response {
-            background: #f9f9f9;
-            border-left: 3px solid #FF6B35;
-            padding: 12px 15px;
-            border-radius: 0 8px 8px 0;
-            margin-top: 15px;
-        }
-        
-        .response-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .response-avatar {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
-        }
-        
-        .response-name {
-            font-weight: 600;
-            color: #333;
-            font-size: 0.9rem;
-        }
-        
-        .response-text {
-            color: #555;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        .avito-link {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .avito-link a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #FF6B35;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .avito-link a:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
-        }
+        <div class="avito-link">
+            <a href="https://www.avito.ru/velikie_luki/predlozheniya_uslug/remont_stiralnyh_mashin_2732575653" target="_blank" rel="noopener">
+                <i class="bi bi-shop"></i> Читать все отзывы на Авито
+            </a>
+        </div>
+    </div>
+</section>
 
+<script>
+// Загружаем отзывы с GitHub
+async function loadAvitoReviews() {
+    try {
+        console.log("🔄 Начинаем загрузку отзывов...");
+        
+        const response = await fetch('https://raw.githubusercontent.com/Michae007/remont-stiralok/main/reviews.json?t=' + Date.now());
+        
+        if (!response.ok) {
+            throw new Error('Файл не найден');
+        }
+        
+        const data = await response.json();
+        console.log("✅ Отзывы загружены:", data);
+        
+        const container = document.getElementById('avito-reviews-grid');
+        
+        if (!data.reviews || data.reviews.length === 0) {
+            container.innerHTML = '<div class="error-message">Отзывы временно недоступны</div>';
+            return;
+        }
+        
+        let html = '';
+        
+        // Показываем первые 6 отзывов
+        data.reviews.slice(0, 6).forEach((review) => {
+            const avatar = review.author.split(' ').map(name => name[0]).join('').toUpperCase();
+            
+            html += `
+                <div class="avito-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">${avatar}</div>
+                            <div class="reviewer-details">
+                                <h4>${review.author}</h4>
+                                <div class="review-date">${review.date}</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="rating-stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+                            <div class="rating-value">${review.rating}.0</div>
+                        </div>
+                    </div>
+                    <div class="review-service">Ремонт стиральной машины</div>
+                    <div class="review-text">${review.text}</div>
+                    <div class="review-response">
+                        <div class="response-header">
+                            <div class="response-avatar">В</div>
+                            <div class="response-name">Владимир, мастер</div>
+                        </div>
+                        <div class="response-text">
+                            Спасибо за отзыв! Рад, что смог помочь. Обращайтесь, если возникнут вопросы!
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        
+        container.innerHTML = html;
+        
+        // Добавляем информацию об обновлении
+        const updateInfo = document.createElement('div');
+        updateInfo.style.textAlign = 'center';
+        updateInfo.style.marginTop = '20px';
+        updateInfo.style.color = '#666';
+        updateInfo.style.fontSize = '0.9em';
+        updateInfo.innerHTML = `🔄 Отзывы обновлены: ${data.last_updated}`;
+        
+        container.parentNode.insertBefore(updateInfo, container.nextSibling);
+        
+    } catch (error) {
+        console.error('❌ Ошибка загрузки отзывов:', error);
+        document.getElementById('avito-reviews-grid').innerHTML = `
+            <div class="error-message">
+                <i class="bi bi-exclamation-triangle"></i> Не удалось загрузить отзывы. Попробуйте обновить страницу.
+            </div>
+        `;
+    }
+}
+
+// Загружаем отзывы при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("📄 Страница загружена, запускаем загрузку отзывов...");
+    loadAvitoReviews();
+});
+
+// Добавляем стили
+const style = document.createElement('style');
+style.textContent = `
+    .loading-reviews {
+        text-align: center;
+        padding: 40px;
+        color: #666;
+        font-size: 1.1em;
+        grid-column: 1 / -1;
+    }
+    .loading-reviews i {
+        animation: spin 1s linear infinite;
+        margin-right: 10px;
+    }
+    .error-message {
+        text-align: center;
+        padding: 40px;
+        color: #e74c3c;
+        font-size: 1.1em;
+        grid-column: 1 / -1;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);
+</script>
         /* Статистика */
         .stats {
             background: white;
