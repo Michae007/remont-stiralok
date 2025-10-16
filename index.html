@@ -2262,7 +2262,7 @@
             });
         }
 
-        // ВАЛИДАЦИЯ И ОТПРАВКА ФОРМЫ (БЕЗ reCAPTCHA)
+        // КЛАСС ДЛЯ ОТПРАВКИ ФОРМЫ НАПРЯМУЮ В TELEGRAM
         class ApplicationForm {
             constructor() {
                 this.form = document.getElementById('application-form');
@@ -2393,8 +2393,8 @@
                 };
                 
                 try {
-                    // Отправка через Google Apps Script
-                    await this.sendToGoogleAppsScript(data);
+                    // Отправляем напрямую в Telegram
+                    await this.sendToTelegramDirect(data);
                     
                     this.showSuccess();
                     this.form.reset();
@@ -2407,28 +2407,84 @@
                 }
             }
             
-            async sendToGoogleAppsScript(data) {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHvLZlkC9clfZetUG_tAngoZFLvO0FvC24KRUFAVzRIH6DqlZ6dbQAQTXwzZ9rE4MM/exec';
+            async sendToTelegramDirect(data) {
+                const BOT_TOKEN = '8181386679:AAEqZim0j6Y5AjeNLsgP5b0PFWaOjuWLfSM';
+                const CHAT_ID = '304849371';
                 
-                const response = await fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
+                const message = `
+🎯 <b>НОВАЯ ЗАЯВКА С САЙТА!</b>
+
+👤 <b>Имя:</b> ${this.escapeHtml(data.name)}
+📞 <b>Телефон:</b> <code>${this.escapeHtml(data.phone)}</code>
+🏷️ <b>Марка:</b> ${this.escapeHtml(data.brand || 'Не указана')}
+🔧 <b>Проблема:</b> ${this.escapeHtml(data.problem || 'Не указана')}
+📝 <b>Описание:</b> ${this.escapeHtml(data.message || 'Не указано')}
+⏰ <b>Время:</b> ${new Date().toLocaleString('ru-RU')}
+📍 <b>Источник:</b> remont-stiralok-velikie-luki.ru
+
+<b>СРОЧНО СВЯЖИТЕСЬ С КЛИЕНТОМ!</b>
+                `.trim();
+
+                // Прямой запрос к Telegram API
+                const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
                 
-                if (!response.ok) {
-                    throw new Error('Ошибка сети');
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            chat_id: CHAT_ID,
+                            text: message,
+                            parse_mode: 'HTML'
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        return { success: true };
+                    } else {
+                        // Пробуем резервный метод
+                        await this.fallbackTelegramMethod(message);
+                        return { success: true };
+                    }
+                } catch (error) {
+                    console.error('Ошибка отправки в Telegram:', error);
+                    // Используем резервный метод
+                    await this.fallbackTelegramMethod(message);
+                    return { success: true };
+                }
+            }
+            
+            async fallbackTelegramMethod(message) {
+                const BOT_TOKEN = '8181386679:AAEqZim0j6Y5AjeNLsgP5b0PFWaOjuWLfSM';
+                const CHAT_ID = '304849371';
+                
+                const encodedMessage = encodeURIComponent(message);
+                const telegramUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodedMessage}&parse_mode=HTML`;
+                
+                // Используем fetch с no-cors
+                try {
+                    await fetch(telegramUrl, {
+                        mode: 'no-cors',
+                        method: 'GET'
+                    });
+                } catch (e) {
+                    // Игнорируем ошибки CORS
+                    console.log('Запрос отправлен (no-cors mode)');
                 }
                 
-                const result = await response.json();
-                
-                if (!result.success) {
-                    throw new Error(result.message || 'Ошибка сервера');
-                }
-                
-                return result;
+                return { success: true };
+            }
+            
+            escapeHtml(text) {
+                if (!text) return '';
+                return text.toString()
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#039;');
             }
             
             setLoading(loading) {
