@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://remont-velikie-luki.ru/sitemap.xml
+
+Host: https://remont-velikie-luki.ru
