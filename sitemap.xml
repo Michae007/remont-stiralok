@@ -10,7 +10,10 @@
     </url>
     <url>
         <loc>https://remont-velikie-luki.ru/kontakty/</loc>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
-    <!-- Добавьте другие страницы при необходимости -->
+    <url>
+        <loc>https://remont-velikie-luki.ru/prices/</loc>
+        <priority>0.6</priority>
+    </url>
 </urlset>
