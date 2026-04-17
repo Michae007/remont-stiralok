@@ -9,13 +9,23 @@
     <link rel="stylesheet" href="/icons.css">
 </head>
 <body>
-    <header><div class="container"><a href="/">← На главную</a></div></header>
-    <main class="container" style="padding:100px 0">
+    <header style="position:static; background:white; box-shadow: none; padding:20px 0;">
+        <div class="container"><a href="/" style="color:var(--primary);"><i class="icon icon-arrow-left"></i> На главную</a></div>
+    </header>
+    <main class="container" style="padding:40px 0 100px;">
         <h1>Ремонт стиральных машин в Невеле</h1>
-        <p>Выезжаю в Невель и все населённые пункты Невельского района. Время прибытия — от 30 минут.</p>
+        <p class="lead">Выезжаю в Невель и все населённые пункты Невельского района. Время прибытия — от 30 минут.</p>
         <h2>Цены такие же, как в Великих Луках</h2>
-        <p>Диагностика — бесплатно, замена подшипников от 2500 ₽, ремонт электроники от 1500 ₽.</p>
-        <a href="tel:+79517577345" class="btn btn-accent">Позвонить</a>
+        <div class="price-table">
+            <div class="price-item"><div class="price-service">Диагностика</div><div class="price-value">Бесплатно*</div><small>*при ремонте</small></div>
+            <div class="price-item"><div class="price-service">Замена подшипников</div><div class="price-value">от 2500 ₽</div></div>
+            <div class="price-item"><div class="price-service">Ремонт электроники</div><div class="price-value">от 1500 ₽</div></div>
+        </div>
+        <p style="margin-top:30px;"><a href="tel:+79517577345" class="btn btn-large btn-accent"><i class="icon icon-phone"></i> Позвонить и вызвать мастера</a></p>
+        <p style="margin-top:20px;">Или напишите в <a href="https://wa.me/79517577345">WhatsApp</a> / <a href="https://t.me/+79517577345">Telegram</a>.</p>
     </main>
+    <footer style="margin-top:0;">
+        <div class="container"><p style="color:white;">&copy; Мастер Владимир, Невель</p></div>
+    </footer>
 </body>
 </html>
