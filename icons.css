@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'bootstrap-icons';
+    src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/fonts/bootstrap-icons.woff2') format('woff2');
+    font-display: swap;
+}
+.icon {
+    font-family: 'bootstrap-icons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+/* Используемые иконки */
+.icon-tools::before { content: "\f848"; }
+.icon-phone::before { content: "\f5c1"; }
+.icon-whatsapp::before { content: "\f618"; }
+.icon-chat::before { content: "\f267"; }
+.icon-list::before { content: "\f479"; }
+.icon-wrench::before { content: "\f636"; }
+.icon-person::before { content: "\f4e3"; }
+.icon-tags::before { content: "\f5ca"; }
+.icon-chat-quote::before { content: "\f266"; }
+.icon-lightning::before { content: "\f46f"; }
+.icon-x::before { content: "\f659"; }
+.icon-star-fill::before { content: "\f586"; }
+.icon-geo-alt::before { content: "\f3e8"; }
+.icon-clock::before { content: "\f293"; }
+.icon-search::before { content: "\f52a"; }
+.icon-gear::before { content: "\f3e5"; }
+.icon-droplet::before { content: "\f309"; }
+.icon-volume-mute::before { content: "\f60c"; }
+.icon-cpu::before { content: "\f2d2"; }
+.icon-nut::before { content: "\f4c6"; }
+.icon-shield-check::before { content: "\f52d"; }
+.icon-cash-coin::before { content: "\f2a0"; }
+.icon-question-circle::before { content: "\f504"; }
+.icon-arrow-up::before { content: "\f148"; }
+.icon-person-check::before { content: "\f4e5"; }
+.icon-heart::before { content: "\f437"; }
+.icon-award::before { content: "\f2b3"; }
+.icon-shop::before { content: "\f52e"; }
+.icon-telegram::before { content: "\f5ca"; }
+.icon-credit-card::before { content: "\f2c6"; }
+.icon-truck::before { content: "\f5e6"; }
+.icon-house-check::before { content: "\f441"; }
+.icon-calendar-check::before { content: "\f273"; }
+.icon-person-square::before { content: "\f4e8"; }
