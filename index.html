@@ -13,7 +13,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     
-    <!-- Предзагрузка -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://mc.yandex.ru">
@@ -71,6 +70,7 @@
             background: var(--gradient); color: white; padding: 12px 24px; border: none;
             border-radius: 50px; cursor: pointer; text-decoration: none; font-weight: 600;
             transition: var(--transition); box-shadow: var(--shadow); white-space: nowrap;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* контрастность */
         }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 48px rgba(37,99,235,0.25); }
         .btn-large { padding: 14px 32px; }
@@ -78,7 +78,6 @@
         .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
         .btn-telegram { background: linear-gradient(135deg, #0088cc, #005580); }
         
-        /* Хлебные крошки */
         .breadcrumbs {
             padding: 100px 0 0 0; margin-bottom: -30px;
             font-size: 0.9rem; color: var(--gray);
@@ -86,7 +85,6 @@
         .breadcrumbs a { color: var(--primary); text-decoration: none; }
         .breadcrumbs span { color: var(--dark); }
 
-        /* Шапка */
         header {
             background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px);
             padding: 16px 0; position: fixed; width: 100%; top: 0; z-index: 1000;
@@ -95,7 +93,7 @@
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 8px; }
         .logo-icon { color: var(--primary); font-size: 1.5rem; }
-        .logo span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 1px 3px rgba(0,0,0,0.1); }
         .mobile-menu-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
         nav ul {
             position: fixed; top: 70px; left: 0; width: 100%; background: white;
@@ -116,20 +114,19 @@
         }
         nav ul li a:hover:after { width: 40px; }
 
-        /* Главный экран */
         .hero {
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(6, 182, 212, 0.85));
             color: white; text-align: center; padding: 60px 0 80px; margin-top: 70px;
             position: relative; overflow: hidden;
         }
-        .hero h1 { color: white; -webkit-text-fill-color: white; }
-        .hero p { color: rgba(255,255,255,0.9); margin-bottom: 2rem; }
+        .hero h1 { color: white; -webkit-text-fill-color: white; text-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .hero p { color: rgba(255,255,255,0.95); margin-bottom: 2rem; }
         .phone-large {
             font-size: 1.6rem; font-weight: bold; margin: 1.5rem 0; display: inline-block;
             background: rgba(255,255,255,0.2); padding: 12px 24px; border-radius: 50px;
             backdrop-filter: blur(10px);
         }
-        .phone-large a { color: white; text-decoration: none; }
+        .phone-large a { color: white; text-decoration: none; text-shadow: 0 1px 3px rgba(0,0,0,0.2); }
         .hero-actions { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 2rem; }
         .highlight { color: #ffd166; font-weight: 700; }
         .text-accent { color: var(--accent); font-weight: 600; }
@@ -139,7 +136,6 @@
             max-width: 800px; margin-left: auto; margin-right: auto;
         }
 
-        /* Плавающие кнопки */
         .floating-action-menu {
             position: fixed; bottom: 80px; right: 15px;
             display: flex; flex-direction: column; gap: 10px; z-index: 998;
@@ -148,6 +144,7 @@
             width: 50px; height: 50px; border-radius: 50%; display: flex;
             align-items: center; justify-content: center; color: white;
             text-decoration: none; box-shadow: var(--shadow); font-size: 1.2rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
         .fab-primary { background: var(--gradient); }
         .fab-whatsapp { background: #25D366; }
@@ -157,7 +154,7 @@
             background: var(--gradient); border-radius: 50%; display: flex;
             align-items: center; justify-content: center; box-shadow: var(--shadow);
             z-index: 999; animation: pulse 2s infinite; text-decoration: none;
-            color: white; font-size: 1.3rem;
+            color: white; font-size: 1.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
         @keyframes pulse {
             0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); }
@@ -171,7 +168,6 @@
         }
         .back-to-top.visible { opacity: 1; visibility: visible; }
 
-        /* Цены */
         .price-table {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px; margin-top: 30px;
@@ -189,10 +185,7 @@
         }
     </style>
 
-    <!-- Кастомные иконки -->
     <link rel="stylesheet" href="/icons.css">
-    
-    <!-- Остальные стили (асинхронно) -->
     <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/styles.css"></noscript>
 
@@ -224,12 +217,10 @@
 </head>
 <body>
 
-<!-- Хлебные крошки -->
 <div class="container breadcrumbs">
     <a href="/">Главная</a> / <span>Ремонт стиральных машин</span>
 </div>
 
-<!-- Плавающие кнопки -->
 <a href="tel:+79517577345" class="floating-call"><i class="icon icon-phone"></i></a>
 <div class="floating-action-menu">
     <a href="tel:+79517577345" class="fab fab-primary"><i class="icon icon-phone"></i></a>
@@ -237,7 +228,6 @@
     <a href="#contact" class="fab fab-contact"><i class="icon icon-chat"></i></a>
 </div>
 
-<!-- Шапка -->
 <header id="header">
     <div class="container header-container">
         <div class="logo">
@@ -256,7 +246,6 @@
     </div>
 </header>
 
-<!-- Главный экран -->
 <section class="hero">
     <div class="container hero-content">
         <h1>Ремонт стиральных машин в Великих Луках и Невеле</h1>
@@ -269,7 +258,6 @@
     </div>
 </section>
 
-<!-- Социальное доказательство -->
 <section class="social-proof">
     <div class="container">
         <div class="proof-grid">
@@ -280,7 +268,6 @@
     </div>
 </section>
 
-<!-- Цены -->
 <section id="prices" class="prices">
     <div class="container">
         <h2>Стоимость ремонта</h2>
@@ -297,7 +284,6 @@
     </div>
 </section>
 
-<!-- О мастере (с фото) -->
 <section id="about" class="about">
     <div class="container">
         <h2>О мастере Владимире</h2>
@@ -309,14 +295,12 @@
                 <p style="margin-top:20px;"><a href="https://yandex.ru/maps/org/.../reviews" target="_blank" style="color:var(--primary); text-decoration:underline;">⭐ Смотреть отзывы клиентов на Яндекс.Картах</a></p>
             </div>
             <div class="about-image">
-                <!-- Фото лежит в папке main, путь /master.jpg -->
                 <img src="/master.jpg" alt="Мастер Владимир - ремонт стиральных машин Великие Луки" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Услуги -->
 <section id="services" class="services">
     <div class="container">
         <h2>Услуги</h2>
@@ -331,7 +315,6 @@
     </div>
 </section>
 
-<!-- Контакты -->
 <section id="contact" class="contact">
     <div class="container">
         <h2>Контакты</h2>
