@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://remont-velikie-luki.ru/sitemap.xml
