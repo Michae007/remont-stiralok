@@ -13,13 +13,17 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#2563EB">
 
-    <!-- Шрифт Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap Icons только нужные -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Предзагрузка критических ресурсов -->
+    <!-- Фото мастера (главное LCP-изображение) -->
+    <link rel="preload" href="/master.jpg" as="image" fetchpriority="high">
+    <!-- Фоновое изображение hero (ускоряет отрисовку первого экрана) -->
+    <link rel="preload" href="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2070&auto=format&fit=crop" as="image">
+    <!-- CSS иконок Bootstrap (чтобы не блокировал рендеринг) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
+    <!-- Шрифт Google (предзагружаем CSS, а сам шрифт загрузится внутри) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <style>
         * {
@@ -344,6 +348,8 @@
             height: auto;
             display: block;
             object-fit: cover;
+            /* Убрана отложенная загрузка, добавлен приоритет */
+            content-visibility: auto;
         }
 
         /* Услуги */
@@ -610,8 +616,8 @@
                 <a href="tel:+79517577345" class="btn btn-primary" style="margin-top:1rem;">Позвонить сейчас</a>
             </div>
             <div class="about-image">
-                <!-- Оставлено ваше прежнее фото мастера -->
-                <img src="/master.jpg" alt="Мастер Владимир — ремонт стиральных машин" loading="lazy">
+                <!-- Убрана отложенная загрузка и добавлен высокий приоритет -->
+                <img src="/master.jpg" alt="Мастер Владимир — ремонт стиральных машин" fetchpriority="high" width="600" height="400">
             </div>
         </div>
     </div>
