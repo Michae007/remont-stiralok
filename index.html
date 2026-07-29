@@ -4,134 +4,612 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт стиральных машин в Великих Луках и Невеле 🔧 Мастер Владимир | Гарантия 1 год</title>
-    <meta name="description" content="Частная мастерская по ремонту стиральных машин в Великих Луках и Невеле. Выезд от 30 минут. Бесплатная диагностика. Цены от 500 руб. Звоните +7 (951) 757-73-45.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#2563eb">
-    
-    <!-- Предзагрузка -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://mc.yandex.ru">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <meta name="description" content="Частный мастер по ремонту стиральных машин. Выезд по Великим Лукам, Невелю и району. Бесплатная диагностика. Гарантия 12 месяцев. Прозрачные цены. Звоните: +7 (951) 757-73-45.">
+    <meta name="keywords" content="ремонт стиральных машин, великие луки, невель, мастер, прайс, цены">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#4F46E5">
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNM0N5V5XT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-NNM0N5V5XT');
-    </script>
-
-    <!-- Современный шрифт Inter -->
+    <!-- Шрифт Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Иконки и стили -->
-    <link rel="stylesheet" href="/icons.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Иконки Bootstrap (используются только для некоторых элементов) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 3rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white;
+            box-shadow: 0 10px 20px -8px rgba(79, 70, 229, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px -8px rgba(79, 70, 229, 0.5);
+        }
+
+        .btn-outline {
+            background: white;
+            color: #4F46E5;
+            border: 2px solid #E0E7FF;
+        }
+
+        .btn-outline:hover {
+            background: #EEF2FF;
+            border-color: #4F46E5;
+        }
+
+        /* Шапка */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1E293B;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #4F46E5;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 72px;
+            left: 0;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-150%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+            list-style: none;
+        }
+
+        nav ul.active {
+            transform: translateY(0);
+        }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+
+        nav ul li a {
+            color: #1E293B;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Герой-секция */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+            color: white;
+            padding: 7rem 0 5rem;
+            margin-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            opacity: 0.15;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .phone-hero {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 2rem 0;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 2.5rem;
+            border-radius: 3rem;
+        }
+
+        .phone-hero a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Секции */
+        section {
+            padding: 5rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #0F172A;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Прайс-лист (пресс лист) */
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .price-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 40px -10px rgba(79, 70, 229, 0.15);
+        }
+
+        .price-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4F46E5;
+        }
+
+        .price-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1E293B;
+        }
+
+        .price-amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #4F46E5;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-desc {
+            color: #64748B;
+            font-size: 0.95rem;
+        }
+
+        /* О мастере */
+        .about-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text {
+            flex: 1 1 400px;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+
+        .about-image {
+            flex: 1 1 400px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Услуги */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: #4F46E5;
+        }
+
+        .service-item h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Контакты */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: #4F46E5;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: #4F46E5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Подвал */
+        footer {
+            background: #0F172A;
+            color: #94A3B8;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1E293B;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Плавающая кнопка звонка */
+        .floating-call {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 15px 25px -8px rgba(79, 70, 229, 0.5);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: white;
+            color: #4F46E5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 5rem 0 3rem;
+            }
+            .phone-hero {
+                font-size: 1.6rem;
+                padding: 0.6rem 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Плавающая кнопка звонка -->
-<a href="tel:+79517577345" class="floating-call" aria-label="Позвонить">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-</a>
+<!-- Плавающая кнопка только звонка -->
+<a href="tel:+79517577345" class="floating-call" aria-label="Позвонить">📞</a>
 
 <!-- Шапка -->
 <header>
     <div class="container header-container">
         <a href="/" class="logo">
-            <span class="logo-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-            </span>
-            <span>Ремонт</span>Стиралок.Луки
+            <div class="logo-icon">🔧</div>
+            <span>РемонтСтиралок.Луки</span>
         </a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         <nav>
             <ul id="navMenu">
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#prices">Цены</a></li>
                 <li><a href="#about">О мастере</a></li>
-                <li><a href="#blog">Блог</a></li>
+                <li><a href="/blog.html">Блог</a></li>
                 <li><a href="/contact.html">Контакты</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- Главный экран -->
+<!-- Герой-секция с фоновой картинкой -->
 <section class="hero">
-    <div class="container hero-content">
+    <div class="hero-content container">
         <h1>Ремонт стиральных машин<br>в Великих Луках и Невеле</h1>
-        <p>⚡ Частная мастерская. Выезд от 30 минут. Бесплатная диагностика.</p>
-        <div class="phone-large">
+        <p>Выезжаю к вам домой или в офис. Бесплатная диагностика при ремонте. Гарантия 1 год.</p>
+        <div class="phone-hero">
             <a href="tel:+79517577345">+7 (951) 757-73-45</a>
         </div>
         <div class="hero-actions">
-            <a href="tel:+79517577345" class="btn btn-accent btn-large">📞 Срочный вызов</a>
-            <a href="https://wa.me/79517577345" class="btn btn-whatsapp"><i class="icon icon-whatsapp"></i> WhatsApp</a>
+            <a href="tel:+79517577345" class="btn btn-primary">📞 Срочный вызов мастера</a>
+            <a href="#prices" class="btn btn-outline">Смотреть цены</a>
         </div>
     </div>
 </section>
 
-<!-- Доказательства -->
-<section class="social-proof">
-    <div class="container">
-        <div class="proof-grid">
-            <div class="proof-item">
-                <div class="proof-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                <div class="proof-text">Рейтинг 5.0 на Яндексе</div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                <div class="proof-text">10+ лет опыта</div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-                <div class="proof-text">Гарантия 12 месяцев</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Цены -->
+<!-- Прайс-лист (пресс лист) -->
 <section id="prices">
     <div class="container">
-        <h2>Прозрачные цены</h2>
-        <div class="price-table">
-            <div class="price-item"><div class="price-service">Диагностика</div><div class="price-value">Бесплатно</div><small>*при ремонте</small></div>
-            <div class="price-item"><div class="price-service">Замена подшипников</div><div class="price-value">от 2500 ₽</div></div>
-            <div class="price-item"><div class="price-service">Ремонт электроники</div><div class="price-value">от 1500 ₽</div></div>
-            <div class="price-item"><div class="price-service">Устранение протечки</div><div class="price-value">от 800 ₽</div></div>
-            <div class="price-item"><div class="price-service">Замена двигателя</div><div class="price-value">от 3000 ₽</div></div>
-            <div class="price-item"><div class="price-service">Выезд мастера</div><div class="price-value">Бесплатно</div></div>
+        <h2>Стоимость ремонта</h2>
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="price-icon"><i class="bi bi-search"></i></div>
+                <h3 class="price-title">Диагностика</h3>
+                <div class="price-amount">0 ₽</div>
+                <p class="price-desc">Бесплатно при выполнении ремонта</p>
+            </div>
+            <div class="price-card">
+                <div class="price-icon"><i class="bi bi-droplet"></i></div>
+                <h3 class="price-title">Устранение протечки</h3>
+                <div class="price-amount">от 800 ₽</div>
+                <p class="price-desc">Замена патрубков, уплотнителей</p>
+            </div>
+            <div class="price-card">
+                <div class="price-icon"><i class="bi bi-cpu"></i></div>
+                <h3 class="price-title">Ремонт электроники</h3>
+                <div class="price-amount">от 1500 ₽</div>
+                <p class="price-desc">Платы управления, датчики</p>
+            </div>
+            <div class="price-card">
+                <div class="price-icon"><i class="bi bi-gear"></i></div>
+                <h3 class="price-title">Замена подшипников</h3>
+                <div class="price-amount">от 2500 ₽</div>
+                <p class="price-desc">С разборкой бака и балансировкой</p>
+            </div>
+            <div class="price-card">
+                <div class="price-icon"><i class="bi bi-lightning-charge"></i></div>
+                <h3 class="price-title">Ремонт двигателя</h3>
+                <div class="price-amount">от 3000 ₽</div>
+                <p class="price-desc">Замена щёток, обмотки</p>
+            </div>
+            <div class="price-card">
+                <div class="price-icon"><i class="bi bi-truck"></i></div>
+                <h3 class="price-title">Выезд мастера</h3>
+                <div class="price-amount">0 ₽</div>
+                <p class="price-desc">По Великим Лукам, Невелю и району</p>
+            </div>
         </div>
-        <p style="text-align:center; margin-top:20px;"><a href="tel:+79517577345" class="btn btn-outline">Уточнить цену по телефону</a></p>
     </div>
 </section>
 
-<!-- О мастере -->
+<!-- О мастере с реалистичным фото -->
 <section id="about">
     <div class="container">
-        <h2>О мастере Владимире</h2>
-        <div class="about-content">
+        <h2>Мастер Владимир</h2>
+        <div class="about-flex">
             <div class="about-text">
-                <p>👋 Здравствуйте! Меня зовут Владимир. Уже более 10 лет я ремонтирую стиральные машины в Великих Луках, Невеле и ближайших районах.</p>
-                <p>🔧 Специализируюсь на сложных случаях, берусь за то, от чего отказываются другие. Использую только качественные запчасти.</p>
-                <p>⭐ Работаю официально, даю гарантию 12 месяцев на все виды работ.</p>
+                <p>Здравствуйте! Меня зовут Владимир. Я занимаюсь ремонтом стиральных машин более 10 лет. Живу и работаю в Великих Луках, выезжаю в Невель и ближайшие населённые пункты.</p>
+                <p>Использую только качественные запчасти и современное оборудование. Даю гарантию 12 месяцев на все виды работ. Специализируюсь на сложных случаях — если другие мастера отказались, приезжаю я.</p>
+                <a href="tel:+79517577345" class="btn btn-primary" style="margin-top:1rem;">Позвонить сейчас</a>
             </div>
             <div class="about-image">
-                <img src="/master.jpg" alt="Мастер Владимир — ремонт стиральных машин">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop" alt="Мастер Владимир за работой" loading="lazy">
             </div>
         </div>
     </div>
@@ -140,131 +618,147 @@
 <!-- Услуги -->
 <section id="services">
     <div class="container">
-        <h2>Услуги</h2>
+        <h2>Что я делаю</h2>
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-                <h3>Диагностика</h3><p>Бесплатно при ремонте</p>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-search"></i></div>
+                <h3>Диагностика</h3>
+                <p>Точно определяю причину поломки</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-                <h3>Ремонт двигателя</h3><p>Замена щёток, обмотки</p>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-droplet"></i></div>
+                <h3>Устранение протечек</h3>
+                <p>Замена патрубков, шлангов</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-                <h3>Протечки</h3><p>Патрубки, уплотнители</p>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-cpu"></i></div>
+                <h3>Электроника</h3>
+                <p>Ремонт плат управления</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
-                <h3>Электроника</h3><p>Платы управления</p>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-gear"></i></div>
+                <h3>Подшипники</h3>
+                <p>С разборкой бака</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="9" y1="9" x2="15" y2="9"/></svg></div>
-                <h3>Подшипники</h3><p>С разборкой бака</p>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
+                <h3>Двигатель</h3>
+                <p>Замена щёток, обмоток</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></div>
-                <h3>Шум</h3><p>Амортизаторы</p>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-volume-up"></i></div>
+                <h3>Шум и вибрация</h3>
+                <p>Амортизаторы, противовесы</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Блог -->
-<section id="blog">
+<!-- Блог (ссылки) -->
+<section style="background: #F1F5F9;">
     <div class="container">
         <h2>Полезные статьи</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <h3>Стиральная машина не сливает воду</h3>
-                <p>Причины, что можно проверить самому и когда нужен мастер.</p>
-                <a href="/statya-ne-slivaet.html" class="btn btn-outline">Читать</a>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-file-text"></i></div>
+                <h3>Машина не сливает воду</h3>
+                <p>Причины и что делать</p>
+                <a href="/statya-ne-slivaet.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
-            <div class="blog-card">
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-exclamation-triangle"></i></div>
                 <h3>Ошибки стиральных машин</h3>
-                <p>Что означают коды ошибок и как на них реагировать.</p>
-                <a href="/statya-oshibki.html" class="btn btn-outline">Читать</a>
+                <p>Расшифровка кодов</p>
+                <a href="/statya-oshibki.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
-            <div class="blog-card">
-                <h3>Как продлить срок службы</h3>
-                <p>7 советов, которые сэкономят вам деньги.</p>
-                <a href="/statya-srok-sluzhby.html" class="btn btn-outline">Читать</a>
+            <div class="service-item">
+                <div class="service-icon"><i class="bi bi-clock-history"></i></div>
+                <h3>Продлить срок службы</h3>
+                <p>7 простых советов</p>
+                <a href="/statya-srok-sluzhby.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Контакты и соцсети -->
+<!-- Контакты без WhatsApp/Telegram -->
 <section id="contact">
     <div class="container">
-        <h2>Свяжитесь со мной</h2>
-        <div class="contact-container">
-            <div class="contact-item"><div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><strong>Телефон</strong><br><a href="tel:+79517577345">+7 (951) 757-73-45</a></div></div>
-            <div class="contact-item"><div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><strong>Режим работы</strong><br>Ежедневно 8:00–22:00</div></div>
-            <div class="contact-item"><div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Выезд</strong><br>Великие Луки, Невель, район</div></div>
+        <h2>Контакты</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="bi bi-telephone"></i>
+                <h3>Телефон</h3>
+                <a href="tel:+79517577345">+7 (951) 757-73-45</a>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-clock"></i>
+                <h3>Режим работы</h3>
+                <p>Ежедневно с 8:00 до 22:00</p>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Выезд</h3>
+                <p>Великие Луки, Невель, район</p>
+            </div>
         </div>
-        <div class="social-links">
-            <a href="https://wa.me/79517577345" class="social-btn social-whatsapp"><i class="icon icon-whatsapp"></i> WhatsApp</a>
-            <a href="https://t.me/+79517577345" class="social-btn social-telegram"><i class="icon icon-telegram"></i> Telegram</a>
-            <a href="https://vk.com/remontstiralokluki" class="social-btn social-vk">ВКонтакте</a>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://vk.com/remontstiralokluki" class="btn btn-outline" target="_blank"><i class="bi bi-vk"></i> Мы ВКонтакте</a>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>О мастерской</h3>
-                <p>Частный мастер по ремонту стиральных машин в Великих Луках и Невеле. Сервис на дому. Гарантия 1 год.</p>
-                <p><a href="https://vk.com/remontstiralokluki" style="color:#9ca3af;">ВКонтакте</a></p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Ремонт стиральных машин</h4>
+                <p>Великие Луки, Невель, Псковская область. Гарантия 1 год.</p>
             </div>
-            <div class="footer-section">
-                <h3>Разделы</h3>
+            <div class="footer-col">
+                <h4>Разделы</h4>
                 <ul>
                     <li><a href="/">Главная</a></li>
                     <li><a href="/blog.html">Блог</a></li>
-                    <li><a href="/faq.html">Частые вопросы</a></li>
+                    <li><a href="/faq.html">Вопросы</a></li>
                     <li><a href="/contact.html">Контакты</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Соцсети</h3>
+            <div class="footer-col">
+                <h4>Связаться</h4>
                 <ul>
+                    <li><a href="tel:+79517577345">+7 (951) 757-73-45</a></li>
                     <li><a href="https://vk.com/remontstiralokluki">ВКонтакте</a></li>
-                    <li><a href="https://t.me/your_channel">Telegram</a></li>
                 </ul>
             </div>
         </div>
-        <div class="copyright">
-            © 2026 Мастер Владимир, Великие Луки — Невель.
+        <div class="footer-bottom">
+            &copy; 2026 Мастер Владимир, Великие Луки
         </div>
     </div>
 </footer>
 
-<a href="#" class="back-to-top" id="backToTop">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
-</a>
+<!-- Кнопка наверх -->
+<a href="#" class="back-to-top" id="backToTop">↑</a>
 
 <script>
-    const btn = document.getElementById('mobileMenuBtn');
-    const nav = document.getElementById('navMenu');
-    if (btn && nav) {
-        btn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            btn.innerHTML = nav.classList.contains('active') 
-              ? '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' 
-              : '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+    // Мобильное меню
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    });
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuBtn.textContent = '☰';
         });
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                btn.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
-            });
-        });
-    }
+    });
+
+    // Плавная прокрутка
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 e.preventDefault();
@@ -272,9 +766,11 @@
             }
         });
     });
-    const btt = document.getElementById('backToTop');
+
+    // Кнопка наверх
+    const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-        btt.classList.toggle('visible', window.scrollY > 500);
+        backToTop.classList.toggle('visible', window.scrollY > 500);
     });
 </script>
 
@@ -283,5 +779,6 @@
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108506209','ym');ym(108506209,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/108506209" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+
 </body>
 </html>
