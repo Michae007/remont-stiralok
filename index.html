@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт стиральных машин в Великих Луках и Невеле 🔧 Мастер Владимир | Гарантия 1 год</title>
-    <meta name="description" content="Частный мастер по ремонту стиральных машин. Выезд по Великим Лукам, Невелю и району. Бесплатная диагностика. Гарантия 12 месяцев. Прозрачные цены. Звоните: +7 (951) 757-73-45.">
+    <title>Ремонт стиральных машин в Великих Луках и Невеле — Мастер Владимир. Выезд от 30 мин. Гарантия</title>
+    <meta name="description" content="Срочный ремонт стиральных машин на дому в Великих Луках и Невеле. Бесплатная диагностика. Опыт 10+ лет. Цены от 500 руб. Звоните +7 (951) 757-73-45.">
     <meta name="keywords" content="ремонт стиральных машин, великие луки, невель, мастер, прайс, цены">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -13,25 +13,17 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#2563EB">
 
-    <!-- Предзагрузка критических ресурсов -->
-    <!-- Фото мастера (главное LCP-изображение) -->
+    <!-- Предзагрузка только критичных ресурсов -->
     <link rel="preload" href="/master.jpg" as="image" fetchpriority="high">
-    <!-- Фоновое изображение hero (ускоряет отрисовку первого экрана) -->
-    <link rel="preload" href="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2070&auto=format&fit=crop" as="image">
-    <!-- CSS иконок Bootstrap (чтобы не блокировал рендеринг) -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
-    <!-- Шрифт Google (предзагружаем CSS, а сам шрифт загрузится внутри) -->
+    <link rel="preload" href="/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Локальный icons.css (только нужные иконки) -->
+    <link rel="stylesheet" href="/icons.css?v=2">
 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background-color: #F8FAFC;
@@ -39,493 +31,147 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Кнопки */
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            border-radius: 3rem;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            white-space: nowrap;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.875rem 2rem; border-radius: 3rem; font-weight: 600; font-size: 1rem;
+            text-decoration: none; transition: all 0.3s ease; cursor: pointer; border: none; white-space: nowrap;
         }
-
         .btn-primary {
-            background: #2563EB;
-            color: white;
+            background: #2563EB; color: white;
             box-shadow: 0 10px 20px -8px rgba(37, 99, 235, 0.4);
         }
+        .btn-primary:hover { background: #1D4ED8; transform: translateY(-2px); box-shadow: 0 15px 25px -8px rgba(37, 99, 235, 0.5); }
+        .btn-outline { background: white; color: #2563EB; border: 2px solid #E0E7FF; }
+        .btn-outline:hover { background: #EEF2FF; border-color: #2563EB; }
 
-        .btn-primary:hover {
-            background: #1D4ED8;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px -8px rgba(37, 99, 235, 0.5);
-        }
-
-        .btn-outline {
-            background: white;
-            color: #2563EB;
-            border: 2px solid #E0E7FF;
-        }
-
-        .btn-outline:hover {
-            background: #EEF2FF;
-            border-color: #2563EB;
-        }
-
-        /* Шапка */
         header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+            background: rgba(255,255,255,0.9); backdrop-filter: blur(12px);
+            padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
         }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #1E293B;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            background: #2563EB;
-            color: white;
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .mobile-menu-btn {
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #2563EB;
-            display: flex;
-            align-items: center;
-        }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; color: #1E293B; text-decoration: none; }
+        .logo-icon { background: #2563EB; color: white; width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .mobile-menu-btn { background: none; border: none; font-size: 2rem; cursor: pointer; color: #2563EB; display: flex; align-items: center; }
 
         nav ul {
-            position: fixed;
-            top: 72px;
-            left: 0;
-            width: 100%;
-            background: white;
-            flex-direction: column;
-            align-items: center;
-            padding: 1.5rem 0;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            transform: translateY(-150%);
-            transition: transform 0.3s ease;
-            z-index: 999;
-            list-style: none;
+            position: fixed; top: 72px; left: 0; width: 100%; background: white;
+            flex-direction: column; align-items: center; padding: 1.5rem 0;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transform: translateY(-150%);
+            transition: transform 0.3s ease; z-index: 999; list-style: none;
         }
+        nav ul.active { transform: translateY(0); }
+        nav ul li { margin: 0.5rem 0; }
+        nav ul li a { color: #1E293B; text-decoration: none; font-weight: 600; font-size: 1.1rem; padding: 0.5rem 1rem; }
 
-        nav ul.active {
-            transform: translateY(0);
-        }
-
-        nav ul li {
-            margin: 0.5rem 0;
-        }
-
-        nav ul li a {
-            color: #1E293B;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-        }
-
-        /* Герой-секция */
         .hero {
             background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
-            color: white;
-            padding: 8rem 0 5rem;
-            margin-top: 72px;
-            position: relative;
-            overflow: hidden;
+            color: white; padding: 8rem 0 5rem; margin-top: 72px; position: relative; overflow: hidden;
         }
-
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: url('https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
             opacity: 0.15;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-
+        .hero-content { position: relative; z-index: 2; text-align: center; }
         .hero h1 {
-            font-size: clamp(2.4rem, 6vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;
             text-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
+        .hero p { font-size: 1.25rem; margin-bottom: 2rem; color: rgba(255,255,255,0.9); max-width: 600px; margin-left: auto; margin-right: auto; }
         .phone-hero {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin: 2rem 0;
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 0.8rem 2.5rem;
-            border-radius: 3rem;
+            font-size: 2.2rem; font-weight: 700; margin: 2rem 0; display: inline-block;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 0.8rem 2.5rem; border-radius: 3rem;
         }
+        .phone-hero a { color: white; text-decoration: none; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
 
-        .phone-hero a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        /* Секции */
-        section {
-            padding: 5rem 0;
-        }
-
+        section { padding: 5rem 0; }
         h2 {
-            text-align: center;
-            font-size: 2.4rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: #0F172A;
-            position: relative;
+            text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 3rem; color: #0F172A; position: relative;
         }
-
         h2:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #2563EB;
-            margin: 1rem auto 0;
-            border-radius: 2px;
+            content: ''; display: block; width: 60px; height: 4px; background: #2563EB; margin: 1rem auto 0; border-radius: 2px;
         }
 
-        /* Прайс-лист */
-        .price-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
         .price-card {
-            background: white;
-            border-radius: 24px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.02);
+            background: white; border-radius: 24px; padding: 2.5rem 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+            text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid rgba(0,0,0,0.02);
         }
-
-        .price-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 40px -10px rgba(37, 99, 235, 0.15);
-        }
-
+        .price-card:hover { transform: translateY(-8px); box-shadow: 0 30px 40px -10px rgba(37, 99, 235, 0.15); }
         .price-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            background: #EEF2FF;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-            color: #2563EB;
+            font-size: 3rem; margin-bottom: 1.5rem; background: #EEF2FF; width: 80px; height: 80px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-left: auto; margin-right: auto; color: #2563EB;
         }
+        .price-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: #1E293B; }
+        .price-amount { font-size: 2.2rem; font-weight: 800; color: #2563EB; margin-bottom: 0.5rem; }
+        .price-desc { color: #64748B; font-size: 0.95rem; }
 
-        .price-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #1E293B;
-        }
+        .about-flex { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; margin-top: 2rem; }
+        .about-text { flex: 1 1 400px; }
+        .about-text p { margin-bottom: 1.2rem; font-size: 1.1rem; color: #334155; }
+        .about-image { flex: 1 1 400px; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 30px -12px rgba(0,0,0,0.15); }
+        .about-image img { width: 100%; height: auto; display: block; object-fit: cover; }
 
-        .price-amount {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #2563EB;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-desc {
-            color: #64748B;
-            font-size: 0.95rem;
-        }
-
-        /* О мастере */
-        .about-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        .about-text {
-            flex: 1 1 400px;
-        }
-
-        .about-text p {
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-            color: #334155;
-        }
-
-        .about-image {
-            flex: 1 1 400px;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            /* Убрана отложенная загрузка, добавлен приоритет */
-            content-visibility: auto;
-        }
-
-        /* Услуги */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
         .service-item {
-            background: white;
-            border-radius: 24px;
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            background: white; border-radius: 24px; padding: 2.5rem 1.5rem; text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.03), 0 4px 6px -2px rgba(0,0,0,0.02);
             transition: transform 0.3s ease;
         }
+        .service-item:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.8rem; margin-bottom: 1.5rem; color: #2563EB; }
+        .service-item h3 { font-weight: 700; margin-bottom: 0.5rem; }
 
-        .service-item:hover {
-            transform: translateY(-5px);
-        }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .contact-card { background: white; border-radius: 24px; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.03); text-align: center; }
+        .contact-card i { font-size: 2.5rem; color: #2563EB; margin-bottom: 1rem; }
+        .contact-card a { color: #2563EB; text-decoration: none; font-weight: 600; }
 
-        .service-icon {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: #2563EB;
-        }
+        footer { background: #0F172A; color: #94A3B8; padding: 3rem 0 2rem; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { color: white; margin-bottom: 1rem; font-size: 1.1rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.5rem; }
+        .footer-col a { color: #94A3B8; text-decoration: none; transition: color 0.2s; }
+        .footer-col a:hover { color: white; }
+        .footer-bottom { border-top: 1px solid #1E293B; padding-top: 1.5rem; text-align: center; font-size: 0.9rem; }
 
-        .service-item h3 {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Контакты */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-card {
-            background: white;
-            border-radius: 24px;
-            padding: 2rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.03);
-            text-align: center;
-        }
-
-        .contact-card i {
-            font-size: 2.5rem;
-            color: #2563EB;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card a {
-            color: #2563EB;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Подвал */
-        footer {
-            background: #0F172A;
-            color: #94A3B8;
-            padding: 3rem 0 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-col a {
-            color: #94A3B8;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-col a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #1E293B;
-            padding-top: 1.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* Плавающая кнопка звонка */
         .floating-call {
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            width: 64px;
-            height: 64px;
-            background: #2563EB;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 15px 25px -8px rgba(37, 99, 235, 0.5);
-            z-index: 1000;
-            animation: pulse 2s infinite;
-            text-decoration: none;
+            position: fixed; bottom: 24px; left: 24px; width: 64px; height: 64px;
+            background: #2563EB; color: white; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 2rem;
+            box-shadow: 0 15px 25px -8px rgba(37, 99, 235, 0.5); z-index: 1000;
+            animation: pulse 2s infinite; text-decoration: none;
         }
-
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.08); }
         }
-
         .back-to-top {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 64px;
-            height: 64px;
-            background: white;
-            color: #2563EB;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.3s;
-            z-index: 1000;
+            position: fixed; bottom: 24px; right: 24px; width: 64px; height: 64px;
+            background: white; color: #2563EB; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 2rem;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1); opacity: 0; visibility: hidden;
+            transition: 0.3s; z-index: 1000;
         }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
 
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Адаптив */
         @media (max-width: 768px) {
-            .hero {
-                padding: 5rem 0 3rem;
-            }
-            .phone-hero {
-                font-size: 1.6rem;
-                padding: 0.6rem 1.8rem;
-            }
+            .hero { padding: 5rem 0 3rem; }
+            .phone-hero { font-size: 1.6rem; padding: 0.6rem 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Плавающая кнопка звонка -->
 <a href="tel:+79517577345" class="floating-call" aria-label="Позвонить">📞</a>
 
-<!-- Шапка -->
 <header>
     <div class="container header-container">
         <a href="/" class="logo">
@@ -545,7 +191,6 @@
     </div>
 </header>
 
-<!-- Герой-секция -->
 <section class="hero">
     <div class="hero-content container">
         <h1>Ремонт стиральных машин<br>в Великих Луках и Невеле</h1>
@@ -560,43 +205,42 @@
     </div>
 </section>
 
-<!-- Прайс-лист -->
 <section id="prices">
     <div class="container">
         <h2>Стоимость ремонта</h2>
         <div class="price-grid">
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-search"></i></div>
+                <div class="price-icon"><i class="icon icon-search"></i></div>
                 <h3 class="price-title">Диагностика</h3>
                 <div class="price-amount">0 ₽</div>
                 <p class="price-desc">Бесплатно при выполнении ремонта</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-droplet"></i></div>
+                <div class="price-icon"><i class="icon icon-droplet"></i></div>
                 <h3 class="price-title">Устранение протечки</h3>
                 <div class="price-amount">от 800 ₽</div>
                 <p class="price-desc">Замена патрубков, уплотнителей</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-cpu"></i></div>
+                <div class="price-icon"><i class="icon icon-cpu"></i></div>
                 <h3 class="price-title">Ремонт электроники</h3>
                 <div class="price-amount">от 1500 ₽</div>
                 <p class="price-desc">Платы управления, датчики</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-gear"></i></div>
+                <div class="price-icon"><i class="icon icon-gear"></i></div>
                 <h3 class="price-title">Замена подшипников</h3>
                 <div class="price-amount">от 2500 ₽</div>
                 <p class="price-desc">С разборкой бака и балансировкой</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-lightning-charge"></i></div>
+                <div class="price-icon"><i class="icon icon-lightning"></i></div>
                 <h3 class="price-title">Ремонт двигателя</h3>
                 <div class="price-amount">от 3000 ₽</div>
                 <p class="price-desc">Замена щёток, обмотки</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-truck"></i></div>
+                <div class="price-icon"><i class="icon icon-truck"></i></div>
                 <h3 class="price-title">Выезд мастера</h3>
                 <div class="price-amount">0 ₽</div>
                 <p class="price-desc">По Великим Лукам, Невелю и району</p>
@@ -605,7 +249,6 @@
     </div>
 </section>
 
-<!-- О мастере -->
 <section id="about">
     <div class="container">
         <h2>Мастер Владимир</h2>
@@ -616,45 +259,43 @@
                 <a href="tel:+79517577345" class="btn btn-primary" style="margin-top:1rem;">Позвонить сейчас</a>
             </div>
             <div class="about-image">
-                <!-- Убрана отложенная загрузка и добавлен высокий приоритет -->
                 <img src="/master.jpg" alt="Мастер Владимир — ремонт стиральных машин" fetchpriority="high" width="600" height="400">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Услуги -->
 <section id="services">
     <div class="container">
         <h2>Что я делаю</h2>
         <div class="services-grid">
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-search"></i></div>
+                <div class="service-icon"><i class="icon icon-search"></i></div>
                 <h3>Диагностика</h3>
                 <p>Точно определяю причину поломки</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-droplet"></i></div>
-                <h3>Устранение протечек</h3>
+                <div class="service-icon"><i class="icon icon-droplet"></i></div>
+                <h3>Протечки</h3>
                 <p>Замена патрубков, шлангов</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-cpu"></i></div>
+                <div class="service-icon"><i class="icon icon-cpu"></i></div>
                 <h3>Электроника</h3>
                 <p>Ремонт плат управления</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-gear"></i></div>
+                <div class="service-icon"><i class="icon icon-gear"></i></div>
                 <h3>Подшипники</h3>
                 <p>С разборкой бака</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
+                <div class="service-icon"><i class="icon icon-lightning"></i></div>
                 <h3>Двигатель</h3>
                 <p>Замена щёток, обмоток</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-volume-up"></i></div>
+                <div class="service-icon"><i class="icon icon-volume-up"></i></div>
                 <h3>Шум и вибрация</h3>
                 <p>Амортизаторы, противовесы</p>
             </div>
@@ -662,25 +303,24 @@
     </div>
 </section>
 
-<!-- Блог -->
 <section style="background: #F1F5F9;">
     <div class="container">
         <h2>Полезные статьи</h2>
         <div class="services-grid">
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-file-text"></i></div>
+                <div class="service-icon"><i class="icon icon-file-text"></i></div>
                 <h3>Машина не сливает воду</h3>
                 <p>Причины и что делать</p>
                 <a href="/statya-ne-slivaet.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-exclamation-triangle"></i></div>
+                <div class="service-icon"><i class="icon icon-warning"></i></div>
                 <h3>Ошибки стиральных машин</h3>
                 <p>Расшифровка кодов</p>
                 <a href="/statya-oshibki.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-clock-history"></i></div>
+                <div class="service-icon"><i class="icon icon-clock"></i></div>
                 <h3>Продлить срок службы</h3>
                 <p>7 простых советов</p>
                 <a href="/statya-srok-sluzhby.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
@@ -689,29 +329,28 @@
     </div>
 </section>
 
-<!-- Контакты -->
 <section id="contact">
     <div class="container">
         <h2>Контакты</h2>
         <div class="contact-grid">
             <div class="contact-card">
-                <i class="bi bi-telephone"></i>
+                <i class="icon icon-phone"></i>
                 <h3>Телефон</h3>
                 <a href="tel:+79517577345">+7 (951) 757-73-45</a>
             </div>
             <div class="contact-card">
-                <i class="bi bi-clock"></i>
+                <i class="icon icon-clock"></i>
                 <h3>Режим работы</h3>
                 <p>Ежедневно с 8:00 до 22:00</p>
             </div>
             <div class="contact-card">
-                <i class="bi bi-geo-alt"></i>
+                <i class="icon icon-geo-alt"></i>
                 <h3>Выезд</h3>
                 <p>Великие Луки, Невель, район</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://vk.com/remontstiralokluki" class="btn btn-outline" target="_blank"><i class="bi bi-vk"></i> Мы ВКонтакте</a>
+            <a href="https://vk.com/remontstiralokluki" class="btn btn-outline" target="_blank">Мы ВКонтакте</a>
         </div>
     </div>
 </section>
@@ -746,11 +385,9 @@
     </div>
 </footer>
 
-<!-- Кнопка наверх -->
 <a href="#" class="back-to-top" id="backToTop">↑</a>
 
 <script>
-    // Мобильное меню
     const menuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
     menuBtn.addEventListener('click', () => {
@@ -763,8 +400,6 @@
             menuBtn.textContent = '☰';
         });
     });
-
-    // Плавная прокрутка
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));
@@ -774,17 +409,15 @@
             }
         });
     });
-
-    // Кнопка наверх
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
         backToTop.classList.toggle('visible', window.scrollY > 500);
     });
-</script>
 
-<!-- Яндекс.Метрика -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108506209','ym');ym(108506209,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+    // Отложенная загрузка Яндекс.Метрики для уменьшения блокировки
+    window.addEventListener('load', function() {
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108506209','ym');ym(108506209,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/108506209" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
 
