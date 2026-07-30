@@ -118,9 +118,10 @@
         .price-icon, .service-icon, .calc-icon {
             margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;
             margin-left: auto; margin-right: auto; transition: transform 0.3s ease;
+            width: 80px; height: 80px; background: #EEF2FF; border-radius: 50%;
         }
         .price-card:hover .price-icon, .service-item:hover .service-icon, .calc-card:hover .calc-icon { transform: scale(1.05); }
-        .price-icon svg, .service-icon svg, .calc-icon svg { width: 64px; height: 64px; color: #2563EB; filter: drop-shadow(0 2px 4px rgba(37,99,235,0.2)); }
+        .price-icon svg, .service-icon svg, .calc-icon svg { width: 40px; height: 40px; color: #2563EB; }
         .price-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: #1E293B; }
         .price-amount { font-size: 2.2rem; font-weight: 800; color: #2563EB; margin-bottom: 0.5rem; }
         .price-desc, .service-item p { color: #64748B; font-size: 0.95rem; }
@@ -169,10 +170,19 @@
         }
         .calc-result { font-size: 2rem; font-weight: 800; color: #2563EB; margin: 1rem 0; }
 
+        /* Адаптивность */
         @media (max-width: 768px) {
             .hero { padding: 5rem 0 3rem; }
-            .phone-hero { font-size: 1.6rem; padding: 0.6rem 1.8rem; }
-            .price-grid, .services-grid, .calc-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+            .phone-hero { font-size: 1.4rem; padding: 0.6rem 1.5rem; }
+            .price-grid, .services-grid, .calc-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .price-card, .service-item, .calc-card { padding: 1.8rem 1.2rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 3rem 0; }
+            .btn { padding: 0.75rem 1.5rem; font-size: 0.95rem; }
+            .about-flex { gap: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .floating-call, .back-to-top { width: 56px; height: 56px; font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -204,7 +214,7 @@
     <section class="hero">
         <div class="hero-content container">
             <h1>Ремонт стиральных машин<br>в Великих Луках и Невеле</h1>
-            <p>Мастер с 2009 года. Выезжаю за 30 минут. Бесплатная диагностика при ремонте. Гарантия 1 год.</p>
+            <p>Мастер с большим опытом. Выезжаю за 30 минут. Бесплатная диагностика при ремонте. Гарантия 1 год.</p>
             <div class="phone-hero"><a href="tel:+79517577345">+7 (951) 757-73-45</a></div>
             <div class="hero-actions">
                 <a href="tel:+79517577345" class="btn btn-primary">📞 Срочный вызов</a>
@@ -219,7 +229,7 @@
             <div class="calc-grid">
                 <div class="calc-card">
                     <div class="calc-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     </div>
                     <label for="repairSelect" style="font-weight:600; font-size:1.1rem; display:block; margin-bottom:0.5rem;">Выберите неисправность</label>
                     <select class="calc-select" id="repairSelect">
@@ -252,7 +262,7 @@
             <div class="price-grid">
                 <div class="price-card">
                     <div class="price-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     </div>
                     <h3 class="price-title">Диагностика</h3>
                     <div class="price-amount">0 ₽</div>
@@ -260,7 +270,7 @@
                 </div>
                 <div class="price-card">
                     <div class="price-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
                     </div>
                     <h3 class="price-title">Устранение протечки</h3>
                     <div class="price-amount">от 800 ₽</div>
@@ -268,7 +278,7 @@
                 </div>
                 <div class="price-card">
                     <div class="price-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M9 2v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M9 2v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg>
                     </div>
                     <h3 class="price-title">Ремонт электроники</h3>
                     <div class="price-amount">от 1500 ₽</div>
@@ -276,7 +286,7 @@
                 </div>
                 <div class="price-card">
                     <div class="price-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/><circle cx="6.34" cy="6.34" r="1.5"/><circle cx="17.66" cy="17.66" r="1.5"/><circle cx="17.66" cy="6.34" r="1.5"/><circle cx="6.34" cy="17.66" r="1.5"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/><circle cx="6.34" cy="6.34" r="1.5"/><circle cx="17.66" cy="17.66" r="1.5"/><circle cx="17.66" cy="6.34" r="1.5"/><circle cx="6.34" cy="17.66" r="1.5"/></svg>
                     </div>
                     <h3 class="price-title">Замена подшипников</h3>
                     <div class="price-amount">от 2500 ₽</div>
@@ -284,7 +294,7 @@
                 </div>
                 <div class="price-card">
                     <div class="price-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
                     </div>
                     <h3 class="price-title">Ремонт двигателя</h3>
                     <div class="price-amount">от 3000 ₽</div>
@@ -292,7 +302,7 @@
                 </div>
                 <div class="price-card">
                     <div class="price-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                     </div>
                     <h3 class="price-title">Выезд мастера</h3>
                     <div class="price-amount">0 ₽</div>
@@ -304,10 +314,10 @@
 
     <section id="about" aria-labelledby="about-heading">
         <div class="container">
-            <h2 id="about-heading">Мастер Владимир — ремонт стиральных машин с 2009 года</h2>
+            <h2 id="about-heading">Мастер Владимир — опытный специалист по ремонту стиральных машин</h2>
             <div class="about-flex">
                 <div class="about-text">
-                    <p>👋 Меня зовут Владимир. Я не теоретик — ремонтирую стиральные машины руками уже 15 лет. Начинал с собственной «стиралки», которая перестала сливать воду в самый неподходящий момент. С тех пор перебрал сотни машинок — от бюджетных Indesit до навороченных Bosch с сушкой.</p>
+                    <p>👋 Меня зовут Владимир. Я ремонтирую стиральные машины больше 10 лет. Начинал с собственной «стиралки», которая перестала сливать воду в самый неподходящий момент. С тех пор перебрал сотни машинок — от бюджетных Indesit до навороченных Bosch с сушкой.</p>
                     <p>🔧 Если причина в копеечном патрубке — скажу как есть. Если нужна сложная замена подшипников с разборкой бака — сделаю с гарантией 12 месяцев. Работаю один, поэтому дорожу репутацией.</p>
                     <p>🚗 Живу в Великих Луках, выезжаю в Невель, Усвяты, Новосокольники и ближайшие деревни. При себе всегда набор оригинальных запчастей и инструмент. В 90% случаев ремонтирую за один визит.</p>
                     <a href="tel:+79517577345" class="btn btn-primary" style="margin-top:1rem;">Позвонить сейчас</a>
@@ -325,42 +335,42 @@
             <div class="services-grid">
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     </div>
                     <h3>Диагностика</h3>
                     <p>Определяю поломку за 15–20 минут, сразу называю цену</p>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
                     </div>
                     <h3>Протечки</h3>
                     <p>Меняю патрубки, уплотнители, устраняю течь насоса</p>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M9 2v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M9 2v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg>
                     </div>
                     <h3>Электроника</h3>
                     <p>Ремонт модулей управления, замена датчиков, прошивка</p>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/><circle cx="6.34" cy="6.34" r="1.5"/><circle cx="17.66" cy="17.66" r="1.5"/><circle cx="17.66" cy="6.34" r="1.5"/><circle cx="6.34" cy="17.66" r="1.5"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/><circle cx="6.34" cy="6.34" r="1.5"/><circle cx="17.66" cy="17.66" r="1.5"/><circle cx="17.66" cy="6.34" r="1.5"/><circle cx="6.34" cy="17.66" r="1.5"/></svg>
                     </div>
                     <h3>Подшипники</h3>
                     <p>Замена с полной разборкой бака, ставлю качественные аналоги</p>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
                     </div>
                     <h3>Двигатель</h3>
                     <p>Замена щёток, перемотка обмоток, балансировка</p>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
                     </div>
                     <h3>Шум и вибрация</h3>
                     <p>Амортизаторы, пружины, противовесы — верну тишину</p>
@@ -375,7 +385,7 @@
             <div class="services-grid">
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                     </div>
                     <h3>Машина не сливает воду</h3>
                     <p>Причины и что делать</p>
@@ -383,7 +393,7 @@
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     </div>
                     <h3>Ошибки стиральных машин</h3>
                     <p>Расшифровка кодов</p>
@@ -391,7 +401,7 @@
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     </div>
                     <h3>Продлить срок службы</h3>
                     <p>7 простых советов</p>
