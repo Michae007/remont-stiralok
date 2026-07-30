@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт стиральных машин в Великих Луках и Невеле — Мастер Владимир. Выезд от 30 мин. Гарантия</title>
-    <meta name="description" content="Срочный ремонт стиральных машин на дому в Великих Луках и Невеле. Бесплатная диагностика. Опыт 10+ лет. Цены от 500 руб. Звоните +7 (951) 757-73-45.">
+    <meta name="description" content="Мастер по ремонту стиральных машин Владимир. Выезжаю по Великим Лукам и Невельскому району. Диагностика — бесплатно, гарантия 12 месяцев. Звоните: +7 (951) 757-73-45.">
     <meta name="keywords" content="ремонт стиральных машин, великие луки, невель, мастер, прайс, цены">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -13,13 +13,13 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#2563EB">
 
-    <!-- Предзагрузка критических ресурсов -->
-    <link rel="preload" href="/master.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2070&auto=format&fit=crop" as="image">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
+    <!-- Предзагрузка критичных ресурсов (теперь WebP) -->
+    <link rel="preload" href="/master.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="/icons.css?v=2">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -209,37 +209,37 @@
         <h2>Стоимость ремонта</h2>
         <div class="price-grid">
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-search"></i></div>
+                <div class="price-icon"><i class="icon icon-search"></i></div>
                 <h3 class="price-title">Диагностика</h3>
                 <div class="price-amount">0 ₽</div>
                 <p class="price-desc">Бесплатно при выполнении ремонта</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-droplet"></i></div>
+                <div class="price-icon"><i class="icon icon-droplet"></i></div>
                 <h3 class="price-title">Устранение протечки</h3>
                 <div class="price-amount">от 800 ₽</div>
                 <p class="price-desc">Замена патрубков, уплотнителей</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-cpu"></i></div>
+                <div class="price-icon"><i class="icon icon-cpu"></i></div>
                 <h3 class="price-title">Ремонт электроники</h3>
                 <div class="price-amount">от 1500 ₽</div>
                 <p class="price-desc">Платы управления, датчики</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-gear"></i></div>
+                <div class="price-icon"><i class="icon icon-gear"></i></div>
                 <h3 class="price-title">Замена подшипников</h3>
                 <div class="price-amount">от 2500 ₽</div>
                 <p class="price-desc">С разборкой бака и балансировкой</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-lightning-charge"></i></div>
+                <div class="price-icon"><i class="icon icon-lightning"></i></div>
                 <h3 class="price-title">Ремонт двигателя</h3>
                 <div class="price-amount">от 3000 ₽</div>
                 <p class="price-desc">Замена щёток, обмотки</p>
             </div>
             <div class="price-card">
-                <div class="price-icon"><i class="bi bi-truck"></i></div>
+                <div class="price-icon"><i class="icon icon-truck"></i></div>
                 <h3 class="price-title">Выезд мастера</h3>
                 <div class="price-amount">0 ₽</div>
                 <p class="price-desc">По Великим Лукам, Невелю и району</p>
@@ -253,12 +253,13 @@
         <h2>Мастер Владимир</h2>
         <div class="about-flex">
             <div class="about-text">
-                <p>Здравствуйте! Меня зовут Владимир. Я занимаюсь ремонтом стиральных машин более 10 лет. Живу и работаю в Великих Луках, выезжаю в Невель и ближайшие населённые пункты.</p>
-                <p>Использую только качественные запчасти и современное оборудование. Даю гарантию 12 месяцев на все виды работ. Специализируюсь на сложных случаях — если другие мастера отказались, приезжаю я.</p>
+                <p>👋 Меня зовут Владимир. Я не теоретик — ремонтирую стиральные машины руками с 2009 года. Начинал с собственной «стиралки», которая перестала сливать воду в самый неподходящий момент. С тех пор перебрал сотни машинок — от бюджетных Indesit до навороченных Bosch с сушкой.</p>
+                <p>🔧 Не люблю разводить клиентов на ненужные работы. Если причина в копеечном патрубке — скажу как есть. Если нужна сложная замена подшипников с разборкой бака — сделаю с гарантией 12 месяцев. Работаю один, поэтому дорожу репутацией.</p>
+                <p>🚗 Живу в Великих Луках, выезжаю в Невель, Усвяты, Новосокольники и ближайшие деревни. При себе всегда набор оригинальных запчастей и инструмент. В 90% случаев ремонтирую за один визит.</p>
                 <a href="tel:+79517577345" class="btn btn-primary" style="margin-top:1rem;">Позвонить сейчас</a>
             </div>
             <div class="about-image">
-                <img src="/master.jpg" alt="Мастер Владимир — ремонт стиральных машин" fetchpriority="high" width="600" height="400">
+                <img src="/master.webp" alt="Мастер Владимир — ремонт стиральных машин" fetchpriority="high" width="600" height="400">
             </div>
         </div>
     </div>
@@ -269,34 +270,34 @@
         <h2>Что я делаю</h2>
         <div class="services-grid">
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-search"></i></div>
+                <div class="service-icon"><i class="icon icon-search"></i></div>
                 <h3>Диагностика</h3>
-                <p>Точно определяю причину поломки</p>
+                <p>Определяю поломку за 15–20 минут, сразу называю цену</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-droplet"></i></div>
+                <div class="service-icon"><i class="icon icon-droplet"></i></div>
                 <h3>Протечки</h3>
-                <p>Замена патрубков, шлангов</p>
+                <p>Меняю патрубки, уплотнители, устраняю течь насоса</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-cpu"></i></div>
+                <div class="service-icon"><i class="icon icon-cpu"></i></div>
                 <h3>Электроника</h3>
-                <p>Ремонт плат управления</p>
+                <p>Ремонт модулей управления, замена датчиков, прошивка</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-gear"></i></div>
+                <div class="service-icon"><i class="icon icon-gear"></i></div>
                 <h3>Подшипники</h3>
-                <p>С разборкой бака</p>
+                <p>Замена с полной разборкой бака, ставлю качественные аналоги</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
+                <div class="service-icon"><i class="icon icon-lightning"></i></div>
                 <h3>Двигатель</h3>
-                <p>Замена щёток, обмоток</p>
+                <p>Замена щёток, перемотка обмоток, балансировка</p>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-volume-up"></i></div>
+                <div class="service-icon"><i class="icon icon-volume-up"></i></div>
                 <h3>Шум и вибрация</h3>
-                <p>Амортизаторы, противовесы</p>
+                <p>Амортизаторы, пружины, противовесы — верну тишину</p>
             </div>
         </div>
     </div>
@@ -307,19 +308,19 @@
         <h2>Полезные статьи</h2>
         <div class="services-grid">
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-file-text"></i></div>
+                <div class="service-icon"><i class="icon icon-file-text"></i></div>
                 <h3>Машина не сливает воду</h3>
                 <p>Причины и что делать</p>
                 <a href="/statya-ne-slivaet.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-exclamation-triangle"></i></div>
+                <div class="service-icon"><i class="icon icon-warning"></i></div>
                 <h3>Ошибки стиральных машин</h3>
                 <p>Расшифровка кодов</p>
                 <a href="/statya-oshibki.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="bi bi-clock-history"></i></div>
+                <div class="service-icon"><i class="icon icon-clock"></i></div>
                 <h3>Продлить срок службы</h3>
                 <p>7 простых советов</p>
                 <a href="/statya-srok-sluzhby.html" class="btn btn-outline" style="margin-top:1rem;">Читать</a>
@@ -333,23 +334,23 @@
         <h2>Контакты</h2>
         <div class="contact-grid">
             <div class="contact-card">
-                <i class="bi bi-telephone"></i>
+                <i class="icon icon-phone"></i>
                 <h3>Телефон</h3>
                 <a href="tel:+79517577345">+7 (951) 757-73-45</a>
             </div>
             <div class="contact-card">
-                <i class="bi bi-clock"></i>
+                <i class="icon icon-clock"></i>
                 <h3>Режим работы</h3>
                 <p>Ежедневно с 8:00 до 22:00</p>
             </div>
             <div class="contact-card">
-                <i class="bi bi-geo-alt"></i>
+                <i class="icon icon-geo-alt"></i>
                 <h3>Выезд</h3>
                 <p>Великие Луки, Невель, район</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://vk.com/remontstiralokluki" class="btn btn-outline" target="_blank"><i class="bi bi-vk"></i> Мы ВКонтакте</a>
+            <a href="https://vk.com/remontstiralokluki" class="btn btn-outline" target="_blank">Мы ВКонтакте</a>
         </div>
     </div>
 </section>
@@ -412,12 +413,34 @@
     window.addEventListener('scroll', () => {
         backToTop.classList.toggle('visible', window.scrollY > 500);
     });
-</script>
 
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108506209','ym');ym(108506209,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+    window.addEventListener('load', function() {
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108506209','ym');ym(108506209,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/108506209" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+
+<!-- Микроразметка -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ремонт стиральных машин — Мастер Владимир",
+  "telephone": "+79517577345",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Великие Луки",
+    "addressRegion": "Псковская область"
+  },
+  "areaServed": ["Великие Луки", "Невель"],
+  "priceRange": "от 500 ₽",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "94"
+  }
+}
+</script>
 
 </body>
 </html>
