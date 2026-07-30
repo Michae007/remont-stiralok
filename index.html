@@ -18,7 +18,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Яндекс.Метрика (новый ID) -->
+    <!-- Яндекс.Метрика (основной счётчик) -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -40,6 +40,19 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/111165834" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <!-- Varioqub experiments -->
+    <script type="text/javascript">
+    (function(e, x, pe, r, i, me, nt){
+    e[i]=e[i]||function(){(e[i].a=e[i].a||[]).push(arguments)},
+    me=x.createElement(pe),me.async=1,me.src=r,nt=x.getElementsByTagName(pe)[0],me.addEventListener('error',function(){function cb(t){t=t[t.length-1],'function'==typeof t&&t({flags:{}})};Array.isArray(e[i].a)&&e[i].a.forEach(cb);e[i]=function(){cb(arguments)}}),nt.parentNode.insertBefore(me,nt)})
+    (window, document, 'script', 'https://abt.s3.yandex.net/expjs/latest/exp.js', 'ymab');
+    ymab('metrika.108506209', 'init'/*, {clientFeatures}, {callback}*/);
+    </script>
+
+    <!-- Yandex Autoplacement (правильный ID для этого сайта) -->
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script data-page-id="19675824" src="https://yandex.ru/ads/system/ap-loader.js" async></script>
 
     <!-- Основные стили -->
     <style>
@@ -283,7 +296,6 @@
     <div class="container">
         <h2>Стоимость ремонта</h2>
         <div class="price-grid">
-            <!-- карточки с SVG-иконками (без изменений) -->
             <div class="price-card">
                 <div class="price-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -359,7 +371,6 @@
     <div class="container">
         <h2>Что я делаю</h2>
         <div class="services-grid">
-            <!-- карточки с SVG-иконками (аналогично ценам, без изменений) -->
             <div class="service-item">
                 <div class="service-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
