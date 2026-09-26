@@ -23,9 +23,10 @@
 <meta property="og:title" content="Ремонт стиральных машин в Великих Луках и Невеле — Мастер Владимир">
 <meta property="og:description" content="Ремонт стиральных машин на дому. Диагностика бесплатно, гарантия 12 месяцев. Звоните: +7 (951) 757-73-45.">
 <meta property="og:url" content="https://remont-velikie-luki.ru/">
+<meta property="og:image" content="https://remont-velikie-luki.ru/logo.webp">
 
 <!-- Предзагрузка -->
-<link rel="preload" href="/master.webp" as="image" fetchpriority="high">
+<link rel="preload" href="/logo.webp" as="image" fetchpriority="high">
 
 <!-- Яндекс.Метрика -->
 <script type="text/javascript">
@@ -59,6 +60,8 @@ ymab('metrika.108506209', 'init');
   "name":"Мастер Владимир — ремонт стиральных машин",
   "url":"https://remont-velikie-luki.ru/",
   "telephone":"+79517577345",
+  "image":"https://remont-velikie-luki.ru/logo.webp",
+  "logo":"https://remont-velikie-luki.ru/logo.webp",
   "description":"Ремонт стиральных машин в Великих Луках и Невеле на дому: диагностика, ремонт неисправностей и замена деталей.",
   "areaServed":["Великие Луки","Невель"],
   "serviceType":"Ремонт стиральных машин",
@@ -80,11 +83,9 @@ ymab('metrika.108506209', 'init');
   --line:#dcebf6;
   --white:#fff;
   --green:#16a36b;
-  --yellow:#ffbd32;
   --shadow:0 18px 55px rgba(9,54,90,.11);
   --radius:24px
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff}
@@ -93,17 +94,17 @@ button,input,textarea{font:inherit}
 .container{width:min(1180px,calc(100% - 32px));margin:auto}
 
 header{
-  height:78px;position:sticky;top:0;z-index:30;background:#fff;
+  height:82px;position:sticky;top:0;z-index:30;background:#fff;
   border-bottom:1px solid var(--line);backdrop-filter:blur(12px)
 }
 .header{height:100%;display:flex;align-items:center;gap:25px}
-.logo{display:flex;align-items:center;gap:11px;margin-right:auto}
+.logo{display:flex;align-items:center;gap:12px;margin-right:auto}
 .logo-icon{
-  width:48px;height:48px;border-radius:15px;
-  background:linear-gradient(145deg,var(--blue),#05a8ee);
-  display:grid;place-items:center;box-shadow:0 9px 22px #0878f933
+  width:56px;height:56px;border-radius:14px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff;box-shadow:0 8px 20px rgba(8,120,249,.15)
 }
-.logo-icon svg{width:32px}
+.logo-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .logo b{display:block;font-size:14px;letter-spacing:.03em;color:var(--navy)}
 .logo span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
 nav{display:flex;gap:22px;font-size:13px;font-weight:800}
@@ -162,31 +163,23 @@ h1 em{font-style:normal;color:#48c7ff}
 .special-note strong{font-size:15px;color:#fff}
 .special-note span{font-size:13px;color:#bfe6ff}
 
-.washer-wrap{position:relative;min-height:470px;display:grid;place-items:center}
-.washer{
-  width:310px;height:390px;border-radius:30px;
-  background:linear-gradient(115deg,#fff,#cbd9e3);border:1px solid #aebfcc;
-  box-shadow:30px 35px 70px #0005;position:relative;padding:30px
+.hero-logo-wrap{position:relative;min-height:470px;display:grid;place-items:center}
+.hero-logo{
+  width:100%;max-width:400px;height:auto;display:block;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));
+  animation:floatLogo 6s ease-in-out infinite
 }
-.washer-top{
-  height:48px;border-radius:12px;background:#eef4f7;display:flex;
-  align-items:center;justify-content:space-between;padding:0 15px;
-  color:#16334d;font-weight:900;font-size:11px
+@keyframes floatLogo{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
 }
-.washer-screen{width:48px;height:20px;border-radius:5px;background:#173b56}
-.door{
-  width:215px;height:215px;border-radius:50%;margin:32px auto 0;
-  background:radial-gradient(circle at 45% 38%,#a4e1ff 0 3%,#17628b 25%,#051827 50%,#7f9cac 52%,#dfeaf1 60%,#aebfcb 64%,#f7fbfd 66%);
-  box-shadow:inset 0 0 0 8px #b9cbd6
-}
-.washer-name{text-align:center;color:#16466c;font-size:12px;font-weight:900;margin-top:22px}
 .float-card{
   position:absolute;background:#fff;color:var(--text);border-radius:17px;
-  padding:14px 16px;box-shadow:var(--shadow);font-size:12px;font-weight:800
+  padding:14px 16px;box-shadow:var(--shadow);font-size:12px;font-weight:800;z-index:2
 }
 .float-card strong{display:block;font-size:17px;color:var(--blue);margin-bottom:3px}
-.f1{right:0;top:80px}
-.f2{left:15px;bottom:75px}
+.f1{right:0;top:60px}
+.f2{left:15px;bottom:60px}
 
 .section{padding:78px 0}
 .soft{background:var(--ice)}
@@ -246,45 +239,51 @@ h2{font-size:40px;letter-spacing:-.04em;line-height:1.08;margin:10px 0 12px}
 .brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
 .brand{
   min-height:96px;background:#fff;border:1px solid var(--line);
-  border-radius:18px;display:flex;align-items:center;justify-content:center;
-  gap:12px;font-weight:900;font-size:19px;box-shadow:0 8px 25px #0b42650a;
-  padding:14px 12px;transition:.2s
+  border-radius:18px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;font-weight:900;font-size:15px;
+  box-shadow:0 8px 25px #0b42650a;padding:14px 12px;transition:.2s
 }
 .brand:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0b426514;border-color:#b9d9ee}
-.brand-logo{
-  width:76px;height:36px;object-fit:contain;object-position:center;display:block
+.brand-logo-svg{width:60px;height:34px;display:block;color:var(--navy)}
+.brand-name{letter-spacing:.02em;color:var(--navy);font-size:13px;text-align:center}
+
+/* Блок "Полезные статьи" на главной */
+.articles-list{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px
 }
-.brand-name{letter-spacing:.02em}
-.brand-text-only{
-  background:linear-gradient(145deg,#eef8ff,#dcebf6);color:var(--navy);
-  font-size:20px;letter-spacing:.04em
+.article-link{
+  display:flex;align-items:center;gap:14px;padding:18px 20px;
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  font-weight:800;font-size:15px;color:var(--navy);
+  box-shadow:0 6px 18px rgba(9,54,90,.04);transition:.2s
 }
+.article-link:hover{
+  transform:translateY(-2px);border-color:var(--blue);
+  box-shadow:0 12px 28px rgba(8,120,249,.12)
+}
+.article-link .art-icon{
+  width:40px;height:40px;border-radius:12px;background:#eaf6ff;
+  display:grid;place-items:center;color:var(--blue);font-size:20px;flex-shrink:0
+}
+.article-link span{display:block}
+.article-link small{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:3px}
 
 #faq .service-grid{grid-template-columns:repeat(2,1fr)}
 
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
-.about-box{
-  background:var(--navy);color:#fff;border-radius:28px;padding:32px;min-height:310px
+.about-box{background:var(--navy);color:#fff;border-radius:28px;padding:32px;min-height:310px}
+.about-logo{
+  width:110px;height:110px;border-radius:20px;overflow:hidden;margin-bottom:22px;
+  background:#fff;padding:8px;box-shadow:0 10px 25px rgba(0,0,0,.25)
 }
-.about-box .logo-big{
-  width:72px;height:72px;border-radius:20px;
-  background:linear-gradient(145deg,var(--blue),#05a8ee);
-  display:grid;place-items:center;margin-bottom:25px
-}
-.about-box .logo-big svg{width:48px}
+.about-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .about-box h3{font-size:27px;margin:0 0 10px}
 .about-box p{color:#bdd2e3;line-height:1.6}
-.about-box .about-phone{
-  display:inline-block;margin-top:16px;font-size:20px;font-weight:900;
-  color:#48c7ff
-}
+.about-box .about-phone{display:inline-block;margin-top:16px;font-size:20px;font-weight:900;color:#48c7ff}
 .about-box .about-phone:hover{color:#fff}
 
 .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
-.check{
-  background:#f6fbff;border:1px solid var(--line);border-radius:13px;
-  padding:13px;font-size:13px;font-weight:800
-}
+.check{background:#f6fbff;border:1px solid var(--line);border-radius:13px;padding:13px;font-size:13px;font-weight:800}
 .check:before{content:"✓";color:var(--green);margin-right:8px}
 
 .cta{
@@ -294,48 +293,33 @@ h2{font-size:40px;letter-spacing:-.04em;line-height:1.08;margin:10px 0 12px}
 }
 .cta h2{margin-top:0}
 .cta p{color:#c4d9e8;margin:0}
-.cta-phone{
-  display:inline-block;margin-top:14px;font-size:22px;font-weight:900;color:#48c7ff
-}
+.cta-phone{display:inline-block;margin-top:14px;font-size:22px;font-weight:900;color:#48c7ff}
 .cta-phone:hover{color:#fff}
 
 footer{background:#061726;color:#fff;padding:35px 0}
-.footer{
-  display:flex;justify-content:space-between;gap:25px;
-  color:#bdd2e3;font-size:13px
-}
+.footer{display:flex;justify-content:space-between;gap:25px;color:#bdd2e3;font-size:13px}
 .footer strong{color:#fff}
 .footer small{line-height:1.7}
 .footer a{margin-left:18px}
 .footer a:hover{color:#fff}
 .footer-phone{color:#48c7ff !important;font-weight:800}
 
-.modal{
-  position:fixed;inset:0;background:#03111dcc;display:none;
-  align-items:center;justify-content:center;z-index:100;padding:20px
-}
+.modal{position:fixed;inset:0;background:#03111dcc;display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
 .modal.open{display:flex}
-.modal-box{
-  width:min(520px,100%);background:#fff;border-radius:26px;
-  padding:30px;position:relative;box-shadow:0 30px 80px #0006
-}
+.modal-box{width:min(520px,100%);background:#fff;border-radius:26px;padding:30px;position:relative;box-shadow:0 30px 80px #0006}
 .modal-box h3{margin:0 0 8px;font-size:28px}
 .modal-box p{color:var(--muted);line-height:1.5}
-.close{
-  position:absolute;right:15px;top:12px;width:40px;height:40px;
-  border:0;background:#f0f6fa;border-radius:50%;font-size:25px;cursor:pointer
-}
+.close{position:absolute;right:15px;top:12px;width:40px;height:40px;border:0;background:#f0f6fa;border-radius:50%;font-size:25px;cursor:pointer}
 form{display:grid;gap:12px;margin-top:20px}
-input,textarea{
-  width:100%;border:1px solid var(--line);border-radius:13px;padding:14px;outline:none
-}
+input,textarea{width:100%;border:1px solid var(--line);border-radius:13px;padding:14px;outline:none}
 textarea{min-height:120px;resize:vertical}
 input:focus,textarea:focus{border-color:var(--blue)}
 
 @media(max-width:900px){
   nav{display:none}
   .hero-grid{grid-template-columns:1fr;padding:60px 0}
-  .washer-wrap{min-height:420px}
+  .hero-logo-wrap{min-height:380px}
+  .hero-logo{max-width:320px}
   .trust{grid-template-columns:repeat(2,1fr)}
   .service-grid{grid-template-columns:1fr}
   .price-layout{grid-template-columns:1fr}
@@ -343,12 +327,13 @@ input:focus,textarea:focus{border-color:var(--blue)}
   .brand-grid{grid-template-columns:repeat(2,1fr)}
   .about{grid-template-columns:1fr}
   .cta{flex-direction:column;align-items:flex-start}
+  .articles-list{grid-template-columns:1fr}
 }
 
 @media(max-width:600px){
   .container{width:min(100% - 22px,1180px)}
-  header{height:68px}
-  .logo-icon{width:42px;height:42px}
+  header{height:72px}
+  .logo-icon{width:48px;height:48px}
   .logo b{font-size:12px}
   .logo span{font-size:9px}
   header .btn{padding:10px 13px;font-size:11px}
@@ -358,20 +343,20 @@ input:focus,textarea:focus{border-color:var(--blue)}
   .hero-phone{font-size:22px}
   .actions{flex-direction:column}
   .actions .btn{width:100%}
-  .washer{width:260px;height:335px}
-  .door{width:175px;height:175px}
-  .f1{right:-5px}
-  .f2{left:0}
+  .hero-logo{max-width:260px}
+  .f1{right:-5px;top:20px}
+  .f2{left:0;bottom:20px}
   .trust{grid-template-columns:1fr 1fr}
   .trust div{padding:18px}
   .steps{grid-template-columns:1fr}
   .brand-grid{grid-template-columns:1fr 1fr}
-  .brand{font-size:14px;min-height:80px;flex-direction:column;gap:5px}
-  .brand-logo{width:65px;height:28px}
+  .brand{font-size:13px;min-height:80px}
+  .brand-logo-svg{width:50px;height:28px}
   #faq .service-grid{grid-template-columns:1fr}
   .checks{grid-template-columns:1fr}
   .footer{flex-direction:column}
   .footer a{margin:0 12px 0 0}
+  .article-link{font-size:14px;padding:15px 16px}
 }
 </style>
 </head>
@@ -383,11 +368,7 @@ input:focus,textarea:focus{border-color:var(--blue)}
 
 <a class="logo" href="/">
 <div class="logo-icon">
-<svg viewBox="0 0 64 64" fill="none">
-<rect x="14" y="7" width="36" height="50" rx="8" fill="white"/>
-<circle cx="32" cy="38" r="12" stroke="#0878F9" stroke-width="4"/>
-<path d="M25 38c3-5 9-5 14 0" stroke="#20B8FF" stroke-width="2.5" stroke-linecap="round"/>
-</svg>
+  <img src="/logo.webp" alt="Логотип — Мастер Владимир, ремонт стиральных машин" width="56" height="56">
 </div>
 <div>
 <b>МАСТЕР ВЛАДИМИР</b>
@@ -399,8 +380,8 @@ input:focus,textarea:focus{border-color:var(--blue)}
 <a href="#services">Услуги</a>
 <a href="#prices">Цены</a>
 <a href="#brands">Бренды</a>
+<a href="#articles">Статьи</a>
 <a href="#faq">Вопросы</a>
-<a href="/blog.html">Блог</a>
 <a href="/contact.html">Контакты</a>
 </nav>
 
@@ -446,17 +427,10 @@ input:focus,textarea:focus{border-color:var(--blue)}
 </div>
 </div>
 
-<div class="washer-wrap">
-<div class="washer">
-<div class="washer-top">
-<span>MASTER VLADIMIR</span>
-<div class="washer-screen"></div>
-</div>
-<div class="door"></div>
-<div class="washer-name">РЕМОНТ СТИРАЛЬНЫХ МАШИН</div>
-</div>
-<div class="float-card f1"><strong>Великие Луки</strong>Выезд на дом</div>
-<div class="float-card f2"><strong>🔧</strong>Гарантия 12 мес.</div>
+<div class="hero-logo-wrap">
+  <img class="hero-logo" src="/logo.webp" alt="Логотип — ремонт стиральных машин, мастер Владимир" width="400" height="400">
+  <div class="float-card f1"><strong>Великие Луки</strong>Выезд на дом</div>
+  <div class="float-card f2"><strong>🔧</strong>Гарантия 12 мес.</div>
 </div>
 
 </div>
@@ -514,7 +488,6 @@ input:focus,textarea:focus{border-color:var(--blue)}
 <p class="lead">Стоимость зависит от модели и характера поломки. Точная сумма согласовывается после диагностики.</p>
 
 <div class="price-layout">
-
 <div class="price-list">
 <div class="price"><span><b>Диагностика</b><small>при согласовании ремонта</small></span><b>0 ₽</b></div>
 <div class="price"><span><b>Устранение протечки</b><small>патрубки, уплотнители</small></span><b>от 800 ₽</b></div>
@@ -530,7 +503,6 @@ input:focus,textarea:focus{border-color:var(--blue)}
 <p>Опишите симптомы — мастер подскажет, с чего начать и нужна ли диагностика.</p>
 <a class="btn btn-light" href="tel:+79517577345">📞 Позвонить</a>
 </aside>
-
 </div>
 </div>
 </section>
@@ -552,6 +524,62 @@ input:focus,textarea:focus{border-color:var(--blue)}
 </section>
 
 
+<!-- Блок со всеми статьями — для внутренней перелинковки и индексации -->
+<section class="section" id="articles">
+<div class="container">
+<div class="kicker">Полезные материалы</div>
+<h2>Статьи и советы по ремонту</h2>
+<p class="lead">Разбираем частые поломки стиральных машин и подсказываем, что можно сделать самостоятельно, а когда нужен мастер.</p>
+
+<div class="articles-list">
+
+<a class="article-link" href="/statya-ne-slivaet.html">
+  <span class="art-icon">💧</span>
+  <span>Машина не сливает воду — причины и ремонт
+    <small>Проверка насоса, фильтра и сливного тракта</small>
+  </span>
+</a>
+
+<a class="article-link" href="/statya-oshibki.html">
+  <span class="art-icon">⚠️</span>
+  <span>Ошибки стиральных машин — расшифровка кодов
+    <small>Что означают E03, F05, OE и другие</small>
+  </span>
+</a>
+
+<a class="article-link" href="/statya-srok-sluzhby.html">
+  <span class="art-icon">⏱</span>
+  <span>Как продлить срок службы стиральной машины
+    <small>7 простых советов от мастера</small>
+  </span>
+</a>
+
+<a class="article-link" href="/zamena-podshipnikov.html">
+  <span class="art-icon">⚙️</span>
+  <span>Замена подшипников — цена и детали
+    <small>Когда нужна замена и сколько это стоит</small>
+  </span>
+</a>
+
+<a class="article-link" href="/remont-dvigatelya.html">
+  <span class="art-icon">🔧</span>
+  <span>Ремонт двигателя стиральной машины
+    <small>Замена щёток, обмотки, балансировка</small>
+  </span>
+</a>
+
+<a class="article-link" href="/nevel.html">
+  <span class="art-icon">🚗</span>
+  <span>Ремонт стиральных машин в Невеле
+    <small>Выезд мастера в Невель и район</small>
+  </span>
+</a>
+
+</div>
+</div>
+</section>
+
+
 <section class="section soft" id="brands">
 <div class="container">
 <div class="kicker">Ремонт разных марок</div>
@@ -559,20 +587,54 @@ input:focus,textarea:focus{border-color:var(--blue)}
 <p class="lead">Работаем с популярными марками и моделями стиральных машин. Если вашей марки нет в списке — уточните возможность ремонта.</p>
 
 <div class="brand-grid">
-
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/bosch" alt="BOSCH" loading="lazy"><span class="brand-name">BOSCH</span></div>
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/lg" alt="LG" loading="lazy"><span class="brand-name">LG</span></div>
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/samsung" alt="SAMSUNG" loading="lazy"><span class="brand-name">SAMSUNG</span></div>
-<div class="brand brand-text-only">INDESIT</div>
-<div class="brand brand-text-only">BEKO</div>
-<div class="brand brand-text-only">CANDY</div>
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/electrolux" alt="ELECTROLUX" loading="lazy"><span class="brand-name">ELECTROLUX</span></div>
-<div class="brand brand-text-only">ARISTON</div>
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/haier" alt="HAIER" loading="lazy"><span class="brand-name">HAIER</span></div>
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/whirlpool" alt="WHIRLPOOL" loading="lazy"><span class="brand-name">WHIRLPOOL</span></div>
-<div class="brand brand-text-only">ZANUSSI</div>
-<div class="brand"><img class="brand-logo" src="https://cdn.simpleicons.org/aeg" alt="AEG" loading="lazy"><span class="brand-name">AEG</span></div>
-
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="20" r="5" fill="currentColor"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="15" fill="currentColor">BOSCH</text></svg>
+<span class="brand-name">BOSCH</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" fill="currentColor"/><text x="14" y="26" font-family="Arial" font-weight="900" font-size="14" fill="#fff">LG</text><text x="42" y="26" font-family="Arial" font-weight="900" font-size="15" fill="currentColor">LG</text></svg>
+<span class="brand-name">LG</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="20" rx="16" ry="12" fill="none" stroke="currentColor" stroke-width="3"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="12" fill="currentColor">SAMSUNG</text></svg>
+<span class="brand-name">SAMSUNG</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="28" height="28" rx="6" fill="currentColor"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="12" fill="currentColor">INDESIT</text></svg>
+<span class="brand-name">INDESIT</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><path d="M8 20 L20 6 L32 20 L20 34 Z" fill="currentColor"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="14" fill="currentColor">BEKO</text></svg>
+<span class="brand-name">BEKO</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="20" r="6" fill="currentColor"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="12" fill="currentColor">CANDY</text></svg>
+<span class="brand-name">CANDY</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 130 40" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="12" width="28" height="16" rx="3" fill="currentColor"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="11" fill="currentColor">ELECTROLUX</text></svg>
+<span class="brand-name">ELECTROLUX</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 6 L30 34 L10 34 Z" fill="currentColor"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="12" fill="currentColor">ARISTON</text></svg>
+<span class="brand-name">ARISTON</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="10" width="28" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="14" fill="currentColor">HAIER</text></svg>
+<span class="brand-name">HAIER</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 130 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="3"/><text x="42" y="26" font-family="Arial" font-weight="900" font-size="11" fill="currentColor">WHIRLPOOL</text></svg>
+<span class="brand-name">WHIRLPOOL</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" fill="currentColor"/><text x="13" y="26" font-family="Arial" font-weight="900" font-size="16" fill="#fff">Z</text><text x="42" y="26" font-family="Arial" font-weight="900" font-size="12" fill="currentColor">ZANUSSI</text></svg>
+<span class="brand-name">ZANUSSI</span>
+</div>
+<div class="brand">
+<svg class="brand-logo-svg" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="28" height="28" rx="4" fill="currentColor"/><text x="14" y="27" font-family="Arial" font-weight="900" font-size="14" fill="#fff">AEG</text><text x="42" y="26" font-family="Arial" font-weight="900" font-size="14" fill="currentColor">AEG</text></svg>
+<span class="brand-name">AEG</span>
+</div>
 </div>
 </div>
 </section>
@@ -624,12 +686,8 @@ input:focus,textarea:focus{border-color:var(--blue)}
 <div class="container about">
 
 <div class="about-box">
-<div class="logo-big">
-<svg fill="none" viewBox="0 0 64 64">
-<rect fill="white" height="50" rx="8" width="36" x="14" y="7"/>
-<circle cx="32" cy="38" r="12" stroke="#0878F9" stroke-width="4"/>
-<path d="M25 38c3-5 9-5 14 0" stroke="#20B8FF" stroke-linecap="round" stroke-width="2.5"/>
-</svg>
+<div class="about-logo">
+  <img src="/logo.webp" alt="Логотип — Мастер Владимир, ремонт стиральных машин" width="110" height="110">
 </div>
 <h3>Мастер Владимир</h3>
 <p>Ремонт стиральных машин с понятным подходом: сначала диагностика, затем согласование стоимости и только после этого ремонт.</p>
@@ -670,6 +728,7 @@ input:focus,textarea:focus{border-color:var(--blue)}
 <a href="#prices">Цены</a>
 <a href="/blog.html">Блог</a>
 <a href="/contact.html">Контакты</a>
+<a href="/faq.html">Вопросы</a>
 <a href="https://vk.com/remontstiralokluki" target="_blank" rel="noopener">ВКонтакте</a>
 <a class="footer-phone" href="tel:+79517577345">+7 (951) 757-73-45</a>
 </div>
